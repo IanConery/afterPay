@@ -1,0 +1,41 @@
+
+.navbar {
+  height: 50px;
+  background: white;
+}
+
+.navbar a {
+  color: black;
+}
+
+.navbar-brand {
+  font-size: 36px;
+  color: black;
+}
+
+.checkout {
+  margin: 0 auto;
+}
+
+.text-box {
+  margin-top: 20px;
+}
+
+.close, .close-payment, .close-verify, .close-confirmation {
+  cursor: pointer;
+}
+
+#content-box {
+  margin-top: 20px;
+}
+
+#address-box, #payment-box, #verify-box, #confirmation {
+  background: whitesmoke;
+  margin: 40px auto;
+  width: 50%;
+  height: auto;
+}
+
+#confirmation {
+  height: 50%;
+}

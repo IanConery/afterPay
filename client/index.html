@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Ian Conery">
+    <title>Checkout</title>
+    <!-- CSS -->
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Generic header for site</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-box">
+        <p>Welcome to my generic checkout page, please use the button below to checkout.</p>
+    </div>
+        <div  class="navbar">
+            <button class="btn btn-secondary checkout" data-toggle='modal'>Checkout</button>
+        </div>
+
+
+    <div id="address-box" class="modal" style="display: none;">
+        <div class="modal-header">
+            <h4>Address Information</h4>
+            <a class="close" data-dismiss="modal">×</a>
+        </div>
+        <div class="modal-body">
+          <form id="address-form">
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="first-name">First name</label>
+                <input type="text" class="form-control" id="first-name" placeholder="Boaty" name="first" required>
+              </div>
+              <div class="form-group col">
+                <label for="last-name">Last name</label>
+                <input type="text" class="form-control" id="last-name" placeholder="McBoatface" name="last" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address1">Street address</label>
+              <input type="text" class="form-control" id="address1" placeholder="123 Somewhere St." name="street" required>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Address 2</label>
+              <input type="text" class="form-control" id="address2" placeholder="Apartment, studio, or floor" name="street2">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="input-city" placeholder="Springfield" name="city" required>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control" name="state" required>
+                  <option selected>Choose...</option>
+                  <option>CA</option>
+                  <option>Everywhere else</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="input-zip" name="zip" required>
+              </div>
+            </div>
+            <button class="btn btn-secondary next">Next</button>
+          </form>
+        </div>
+    </div>
+
+    <div id="payment-box" class="modal" style="display: none;">
+        <div class="modal-header">
+          <h4>Payment Information</h4>
+          <a class="close-payment" data-dismiss="modal">×</a>
+        </div>
+        <div class="modal-body">
+          <form id="payment-form">
+            <div class="form-group">
+              <label for="cc-number">Credit Card Number</label>
+              <input type="creditcard" class="form-control" id="cc-number" placeholder="12345678910" name="cc-num" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="expiration">Expiration Date</label>
+                <input type="text" class="form-control" id="expiration" placeholder="mm/yy" name="expiration" required>
+              </div>
+              <div class="form-group col">
+                <label for="cvv">CVV</label>
+                <input type="text" class="form-control" id="cvv" placeholder="123" name="cvv" required>
+              </div>
+            </div>
+            <button class="btn btn-secondary back">Back</button>
+            <button class="btn btn-secondary verify">Next</button>
+          </form>
+        </div>
+    </div>
+
+    <div id="verify-box" class="modal" style="display: none;">
+      <div class="modal-header">
+        <h4>Final Step</h4>
+        <a class="close-verify" data-dismiss="modal">x</a>
+      </div>
+      <div class="modal-body">
+        <p>Please verify that your information is correct and then hit the submit payment button.</p>
+        <ul id="verify-list" class="list-group">
+
+        </ul>
+      </div class="modal-body">
+        <button class="btn btn-secondary back-two">Back</button>
+        <button class="btn btn-primary submit">Submit Payment</button>
+    </div>
+
+    <div id="confirmation" class="modal" style="display: none;">
+      <div class="modal-header">
+        <h4>Confirmation</h4>
+        <a class="close-confirmation" data-dismiss="modal">x</a>
+      </div>
+      <div class="modal-body">
+        <p class="response"></p>
+      </div>
+    </div>
+  </body>

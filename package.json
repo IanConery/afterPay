@@ -1,0 +1,27 @@
+{
+  "name": "afterpay",
+  "version": "0.1.0",
+  "description": "coding challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanConery/afterPay.git"
+  },
+  "author": "Ian Conery",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IanConery/afterPay/issues"
+  },
+  "homepage": "https://github.com/IanConery/afterPay#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
